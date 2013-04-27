@@ -18,7 +18,7 @@ Reference:
 # Open up crosh shell
 See: http://www.chromium.org/chromium-os/poking-around-your-chrome-os-device
 
-# INSTALL STEP 2: Format external sd card as ext3 and name volume 'arch'
+# Format external sd card as ext3 and name volume 'arch'
 
     $ sudo umount /dev/mmcblk1p1 
     $ sudo mkfs.ext3 -L arch /dev/mmcblk1p1 
@@ -34,6 +34,7 @@ At this point ChromeOS will automount to /media/removable/arch as noexec and nos
 * You need to remount it so you can execute stuff on it.
 * You need to do this every boot, so it'll be part of the startup script later.
 
+
     $ sudo mount -i -o remount,exec,suid /media/removable/arch/
 
 # Download arch linux tarball
@@ -46,8 +47,10 @@ At this point ChromeOS will automount to /media/removable/arch as noexec and nos
 IMPORTANT: You should NOT get any errors/warnings from tar.
 
 If you do, look for differences from the notes where you might be:
+
 * Not decompressing as root
 * Not using a non ext3 filesystem (ext3 isn't strictly required, but fat32 isn't going to work.)
+
 
     $ sudo mkdir arch
     $ cd arch
