@@ -1,6 +1,6 @@
 # Install
 My steps for installing ArchLinux userspace on Android 4.2.1 running on Kindle Fire
-YMMV. [http://www.twitter.com/mike_acton](@mike_acton)
+YMMV. [@mike_acton](http://www.twitter.com/mike_acton)
 
 ## Presumably Android 4.2.1 is already installed. If not
 
