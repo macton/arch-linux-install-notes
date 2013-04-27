@@ -141,7 +141,9 @@ find and uncomment the line below...
 
     %wheel ALL=(ALL) ALL
 
-## Add user. Follow prompts. Add "wheel" to additional groups when prompted.
+## Add user. 
+
+Follow prompts. Add "wheel" to additional groups when prompted.
 
     adduser
 
