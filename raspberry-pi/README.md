@@ -122,6 +122,11 @@ e.g.
     Timing cached reads:         292 MB in  2.01 seconds = 145.14 MB/sec
     Timing buffered disk reads:   56 MB in  3.10 seconds =  18.07 MB/sec
 
+# Get .bashrc
+
+    $ cd ~
+    $ wget https://raw.github.com/macton/arch-linux-install-notes/master/common/.bashrc
+
 # Build a raspberri pi sample
 Copy to home
 
