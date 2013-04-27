@@ -14,13 +14,19 @@ http://archlinuxarm.org/forum/viewtopic.php?f=31&t=3119#p18160
 https://wiki.archlinux.org/index.php/Swap#Swap_file
      
 # Change timezone
+
     $ vi /etc/timezone
 Change to: America/Los_Angeles
       
 # Change hostname
+
     $ hostnamectl set-hostname myhostname
+
+* Hostname generator: http://computernamer.com/
+* Hostname generator: http://online-generator.com/name-generator/product-name-generator.php
        
 # Update 
+
     $ pacman -Sy pacman
     $ pacman-key --init # TAKES A LONG TIME! Also recommended: Do some random stuff on machine while running.
     $ pacman -Syu
@@ -29,20 +35,24 @@ Change to: America/Los_Angeles
 # Update sudo
 edit /etc/sudoers file
 find and uncomment the line below...
+
     %wheel ALL=(ALL) ALL
          
 # Add user
 Add user. Follow prompts. 
 For additional groups: audio floppy video power lp scanner wheel
+
     $ adduser
     $ su <user>
           
 # Install packages for general development. 
 Also, BTW most of these packages are needed to compile the gcc toolchain. (If you happen to want to do that...)
+
     $ sudo pacman -S binutils elfutils gcc git gperf python2 subversion unzip zip base-devel
            
 # Test gcc
 Make a quick hello world program, compile and run to make sure gcc's working okay.
+
     $ echo -e '#include <stdio.h>\nmain(){printf("hello world\\n");}' | gcc -o hello -xc -
     $ ./hello
             
@@ -50,9 +60,11 @@ Make a quick hello world program, compile and run to make sure gcc's working oka
 https://wiki.archlinux.org/index.php/NTPd
 
 Install ntp (uninstall openntp if installed)
+
     $ sudo pacman -S ntp
               
 Create /etc/systemd/system/ntp-once.service
+
     [Unit]
     Description=Network Time Service (once)
     After=network.target nss-lookup.target 
@@ -65,10 +77,12 @@ Create /etc/systemd/system/ntp-once.service
     WantedBy=multi-user.target
                  
 Enable ntp
+
     $ sudo systemctl enable ntpd
                   
 Get updated time
 Note: There were some zombie ntpds I had to kill to get the time to update.
+
     $ sudo ntpd -qg
                    
 # Set up git/github.
