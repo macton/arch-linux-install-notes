@@ -124,10 +124,12 @@ e.g.
 
 # Build a raspberri pi sample
 Copy to home
+
     $ cd ~
     $ cp -R /opt/vc/src/hello_pi .
     $ cd hello_pi/hello_triangle
     $ make
                                   
 Should see spinning textured cube
+
     $ ./hello_triangle.bin
