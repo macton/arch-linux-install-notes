@@ -66,12 +66,12 @@ I'm using: cm-10.1-20130108-UNOFFICIAL-otter.zip and gapps-jb-20121212-signed.zi
 ## Create startup script (~/arch.sh)
 
     cd ~
-    wget https://raw.github.com/macton/arch-linux-install-notes/master/kindle-fire/arch.sh --no-check-certificate
+    wget https://raw.github.com/macton/arch-linux-install-notes/master/kindle-fire-android-chroot/arch.sh --no-check-certificate
 
 ## Create init script ($dir/init.sh)
 
     cd $dir
-    wget https://raw.github.com/macton/arch-linux-install-notes/master/kindle-fire/init.sh --no-check-certificate
+    wget https://raw.github.com/macton/arch-linux-install-notes/master/kindle-fire-android-chroot/init.sh --no-check-certificate
 
 ## Go for Linux
 
