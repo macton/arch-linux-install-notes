@@ -1,0 +1,19 @@
+---------------------------------------------------------------------------------------------------
+If at some point you can't login/ssh/sudo as a non-root user and just get the message 
+"System is booting up.", check to see if the /run/nologin file exists and delete it. This file 
+would normally be deleted by an init script. But if you don't run init scripts it can get orphaned 
+there. It might be good to delete /run /var/run and /var/lock in the start script, but I haven't 
+done that yet.
+---------------------------------------------------------------------------------------------------
+Open port 22 for ssh
+$ sudo iptables -A INPUT -p tcp --dport ssh -j ACCEPT
+
+Open port 80 for http
+$ sudo iptables -A INPUT -p tcp --dport 80 -j ACCEPT
+
+Open port 8080 for http
+$ sudo iptables -A INPUT -p tcp --dport 8080 -j ACCEPT
+---------------------------------------------------------------------------------------------------
+To startup sshd
+$ sudo /etc/rc.d/sshd start
+---------------------------------------------------------------------------------------------------
