@@ -34,6 +34,7 @@ At this point ChromeOS will automount to /media/removable/arch as noexec and nos
 * You need to remount it so you can execute stuff on it.
 * You need to do this every boot, so it'll be part of the startup script later.
 
+Mount card:
 
     $ sudo mount -i -o remount,exec,suid /media/removable/arch/
 
@@ -51,6 +52,7 @@ If you do, look for differences from the notes where you might be:
 * Not decompressing as root
 * Not using a non ext3 filesystem (ext3 isn't strictly required, but fat32 isn't going to work.)
 
+Decompress:
 
     $ sudo mkdir arch
     $ cd arch
