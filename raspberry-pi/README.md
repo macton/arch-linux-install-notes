@@ -125,7 +125,7 @@ e.g.
 # Get .bashrc
 
     $ cd ~
-    $ wget https://raw.github.com/macton/arch-linux-install-notes/master/common/.bashrc
+    $ wget https://raw.github.com/macton/arch-linux-install-notes/master/common/.bashrc --no-check-certificate
 
 # Build a raspberri pi sample
 Copy to home
