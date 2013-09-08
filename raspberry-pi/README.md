@@ -124,7 +124,7 @@ git push something to make sure that works.
 http://marks-space.com/2012/12/27/how-to-test-the-sd-card-speed-on-your-raspberry-pi/
                              
     $ sudo pacman -S hdparm
-    $ hdparm hdparm -tT /dev/mmcblk0
+    $ sudo hdparm -tT /dev/mmcblk0
                               
 e.g.
     /dev/mmcblk0:
