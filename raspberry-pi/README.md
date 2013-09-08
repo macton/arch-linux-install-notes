@@ -6,6 +6,10 @@ http://archlinuxarm.org/platforms/armv6/raspberry-pi
 # Configure network
 I use a static IP address.
 https://wiki.archlinux.org/index.php/Netcfg
+
+  - delete any eth0 startup from /etc/systemd/system/...
+  - cp /etc/netctl/examples/ethernet-static /etc/netctl/eth0
+  - vi /etc/netctl/eth0
    
 # Resize sdcard partition
 http://archlinuxarm.org/forum/viewtopic.php?f=31&t=3119#p18160
