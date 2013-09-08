@@ -12,7 +12,8 @@ https://wiki.archlinux.org/index.php/Netcfg
   - vi /etc/netctl/eth0
    
 # Resize sdcard partition
-http://archlinuxarm.org/forum/viewtopic.php?f=31&t=3119#p18160
+  - http://jan.alphadev.net/post/53594241659/growing-the-rpi-root-partition
+  - Also see: http://archlinuxarm.org/forum/viewtopic.php?f=31&t=3119#p18160
     
 # Make swap file
 https://wiki.archlinux.org/index.php/Swap#Swap_file
@@ -28,6 +29,10 @@ Change to: America/Los_Angeles
 
 * Hostname generator: http://computernamer.com/
 * Hostname generator: http://online-generator.com/name-generator/product-name-generator.php
+
+# Change root password
+
+    $ passwd
        
 # Update 
 
