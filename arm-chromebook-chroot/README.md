@@ -131,10 +131,12 @@ For "additional groups" I use: audio floppy video power lp scanner wheel
 
 Make sure you have normal network services as user
 
+    $ sudo pacman -S wget
     $ wget http://www.w3.org/History/1989/proposal.rtf
 
 ** ONLY DO THE FOLLOWING IF WGET FAILS **
 Note: may only be a problem on some older Arch Linux images.
+Update: No issue encounted on latest as of 16 Sep 2013
 
     $ sudo groupadd -g 3004 inet
     $ sudo usermod -g inet <user>
@@ -149,6 +151,7 @@ Make sure you can ping as user
 
 * Note: may only be a problem on some older Arch Linux images.
 * Also: This can also be symptomatic of nosuid set on the device. (did you remount the sdcard?)
+* Update: No issue encounted on latest as of 16 Sep 2013
 
 Fix ping:
 
