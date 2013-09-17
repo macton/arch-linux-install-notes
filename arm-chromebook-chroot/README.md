@@ -38,6 +38,8 @@ At this point ChromeOS will automount to /media/removable/arch as noexec and nos
 
 Mount card:
 
+Update: ChromeOS properly auto-mounted device (16 September 2013), so not needed.
+
     $ sudo mount -i -o remount,exec,suid /media/removable/arch/
 
 ## Download arch linux tarball
@@ -69,7 +71,7 @@ Now that you have arch linux installed. You need to set it up properly.
 Download and install arch_start.sh
 
     $ cd /media/removable/arch/
-    $ wget https://raw.github.com/macton/arch-linux-install-notes/master/arm-chromebook-chroot/arch_start.sh --no-check-certificate
+    $ sudo wget https://raw.github.com/macton/arch-linux-install-notes/master/arm-chromebook-chroot/arch_start.sh --no-check-certificate
 
 ## Go for Linux!
 
@@ -88,6 +90,7 @@ Note: the pacman-key step can take a while.
 ## Clean up some warnings
 
 You may notice some warnings that look like this when running pacman
+Update: Did not occur on latest as of 16 Sep 2013
 
     warning: could not get filesystem information for /mnt/stateful_partition: No such file or directory
     warning: could not get filesystem information for /mnt/stateful_partition/encrypted: No such file or directory
@@ -154,10 +157,10 @@ Fix ping:
 
 ## Install packages for general development. 
 
-Your needs may vary. I need development tools and tools to re-build the gcc toolchain. 
+Your needs may vary. I need development tools and tools to re-build the gcc toolchain and other stuff. 
 It's safe to get all this stuff though, even if you don't use all of it.
 
-    $ sudo pacman -S binutils elfutils gcc git gperf python2 subversion unzip zip base-devel
+    $ sudo pacman -S binutils elfutils gcc git gperf python2 subversion unzip zip base-devel nodejs
 
 ## Check that you can build and run a native executable.
 
