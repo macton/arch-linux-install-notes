@@ -1,3 +1,6 @@
+# See also
+  - http://hacktracking.blogspot.com/2012/12/arch-linux-on-raspberry-pi.html
+
 # Create SD card image and boot
 
 Link under "Installation"
@@ -137,13 +140,10 @@ e.g.
     $ wget https://raw.github.com/macton/arch-linux-install-notes/master/common/.bashrc --no-check-certificate
 
 # Build a raspberri pi sample
-Copy to home
 
+    $ sudo chmod 777 /dev/vchiq
     $ cd ~
-    $ cp -R /opt/vc/src/hello_pi .
-    $ cd hello_pi/hello_triangle
+    $ git clone https://github.com/benosteen/opengles-book-samples/tree/master/Raspi
+    $ cd opengles-book-samples/Raspi
     $ make
-                                  
-Should see spinning textured cube
 
-    $ ./hello_triangle.bin
