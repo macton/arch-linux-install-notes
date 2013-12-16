@@ -147,3 +147,5 @@ e.g.
     $ cd opengles-book-samples/Raspi
     $ make
 
+# See also
+  - Framebuffer size discuss http://www.raspberrypi.org/phpBB3/viewtopic.php?f=33&t=7305   
